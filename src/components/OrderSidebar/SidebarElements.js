@@ -28,6 +28,10 @@ export const OrderboxWrapper = styled.div`
     background: #fff;
     display: flex;
     flex-direction: column;
+
+    @media screen and (max-width: 660px) {
+        width: 100%;
+    }
 `;
 
 export const CloseIcon = styled.div`
