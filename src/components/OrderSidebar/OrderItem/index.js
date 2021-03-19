@@ -23,7 +23,7 @@ const OrderItem = ({ name, type, sensor, price, promotionalPrice, imageUrl, item
                 <CurrentPrice>{price.toFixed(2)} zł</CurrentPrice>
                 <ActionWrapper>
                     <AcitonLabel>szt.</AcitonLabel>
-                    <ActionInput name="itemCounter" value={itemCounter} onChange={(e) => handleInput(e, name)}/>
+                    <ActionInput type="number" name="itemCounter" value={itemCounter} onChange={(e) => handleInput(e, name)}/>
                     <ActionIcon src={trash} alt="trash" onClick={(e) => handleDelete(e,name)}/>
                 </ActionWrapper>
             </ItemRighBarWrap>
