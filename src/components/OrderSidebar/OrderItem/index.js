@@ -24,7 +24,7 @@ const OrderItem = ({ name, type, sensor, price, promotionalPrice, imageUrl, item
                 <ActionWrapper>
                     <AcitonLabel>szt.</AcitonLabel>
                     <ActionInput name="itemCounter" value={itemCounter} onChange={(e) => handleInput(e, name)}/>
-                    <ActionIcon src={trash} alt="trash" onClick={() => handleDelete(name)}/>
+                    <ActionIcon src={trash} alt="trash" onClick={(e) => handleDelete(e,name)}/>
                 </ActionWrapper>
             </ItemRighBarWrap>
         </ItemContainer>

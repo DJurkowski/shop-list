@@ -14,7 +14,8 @@ const OrderSidebar = ({ isOpen, closeAction }) => {
         if(isOpen) closeAction(false);
     });
 
-    const handleDelete = (name) => {
+    const handleDelete = (e, name) => {
+        e.stopPropagation();
         setOrders(
             orders.filter((order) => order.name !== name)
         );
