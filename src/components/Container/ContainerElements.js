@@ -10,6 +10,7 @@ export const Wrapper = styled.div`
     background: #fff;
     border: 1px solid #E1E1E1;
     border-radius: 3px;
+    position: relative;
 `;
 
 
