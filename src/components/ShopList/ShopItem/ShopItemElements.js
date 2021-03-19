@@ -34,6 +34,7 @@ export const ItemContainer = styled.div`
     border-radius: 10px;
     box-shadow: 2px 2px 6px #00000029;
     transition: min-height 0.6s ease-in-out;
+    position: relative;
 
     &:hover ${Button} {
         display: block;
@@ -47,6 +48,23 @@ export const ItemContainer = styled.div`
         min-height: 363px;
         transition: min-height 0.6s ease-in-out;
     }
+`;
+
+export const NewLabel = styled.div`
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100px;
+    height: 20px;
+    padding: 2px;
+    text-align: center;
+    background: #00BE97;
+    color: #fff;
+    font-family: 'Rubik', 'Arial';
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 10px 0px;
+    text-decoration: uppercase;
 `;
 
 export const Image = styled.img`
@@ -95,8 +113,9 @@ export const PrevPrice = styled.div`
     align-self: flex-end;
     color: #FF6E2E;
     text-decoration: line-through;
+    font-family: 'Rubik', 'Arial';
     font-size: 15px;
-    font-weight: bold;
+    font-weight: 500;
     margin: 5px 0;
 `;
 
