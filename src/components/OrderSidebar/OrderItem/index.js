@@ -1,31 +1,30 @@
 import React from 'react';
 
 import { ItemContainer, Image, ItemContentWrap, Name, Desc, DescLabel, DescType, ItemRighBarWrap, PrevPrice, CurrentPrice,ActionWrapper, AcitonLabel, ActionInput, ActionIcon } from './OrderElements';
-import image from '../../../utils/images/ListItem/mouse.png';
 import trash from '../../../utils/images/trash.svg';
 
-const OrderItem = () => {
+const OrderItem = ({ name, type, sensor, price, promotionalPrice, imageUrl, itemCounter, handleDelete, handleInput }) => {
     return (
         <ItemContainer>
-            <Image src={image} alt="image"/>
+            <Image src={imageUrl} alt={name}/>
             <ItemContentWrap>
-                <Name>SteelSeries Rival 3</Name>
+                <Name>{name}</Name>
                 <Desc>
                     <DescLabel>Typ myszki: </DescLabel>
-                    <DescType>Dla gracza</DescType>
+                    <DescType>{type}</DescType>
                 </Desc>
                 <Desc>
                     <DescLabel>Sensor: </DescLabel>
-                    <DescType>optyczny</DescType>
+                    <DescType>{sensor}</DescType>
                 </Desc>
             </ItemContentWrap>
             <ItemRighBarWrap>
-                <PrevPrice>199,00 zł</PrevPrice>
-                <CurrentPrice>159,00 zł</CurrentPrice>
+                {promotionalPrice && <PrevPrice>{promotionalPrice.toFixed(2)} zł</PrevPrice>}
+                <CurrentPrice>{price.toFixed(2)} zł</CurrentPrice>
                 <ActionWrapper>
                     <AcitonLabel>szt.</AcitonLabel>
-                    <ActionInput value="1"/>
-                    <ActionIcon src={trash} alt="trash"/>
+                    <ActionInput name="itemCounter" value={itemCounter} onChange={(e) => handleInput(e, name)}/>
+                    <ActionIcon src={trash} alt="trash" onClick={() => handleDelete(name)}/>
                 </ActionWrapper>
             </ItemRighBarWrap>
         </ItemContainer>
