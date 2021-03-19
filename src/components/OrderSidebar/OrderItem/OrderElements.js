@@ -10,11 +10,11 @@ export const ItemContainer = styled.div`
 `;
 
 export const Image = styled.img`
-    padding: 10px;
+    padding: 10px 0 10px 10px;
     height: 100px;
     width: 120px;
 
-    @media screen and (max-width: 440px) {
+    @media screen and (max-width: 525px) {
         display: none;
     }
 `;
@@ -25,7 +25,7 @@ export const ItemContentWrap = styled.div`
     justify-content: flex-start;
     align-items: center;
     width: 200px;
-    padding: 20px 10px 20px 0;
+    padding: 20px 10px 20px 10px;
 
     @media screen and (max-width: 440px) {
         padding-left: 10px;
@@ -114,7 +114,8 @@ export const AcitonLabel = styled.div`
 `;
 
 export const ActionInput = styled.input`
-    width: 36px;
+    width: 50px;
+    padding: 2px;
     border: 1px solid #7E7E7E;
     border-radius: 10px;
     text-align: center;
