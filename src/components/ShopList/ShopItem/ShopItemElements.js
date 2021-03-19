@@ -19,6 +19,9 @@ export const Footer = styled.div`
     color: #7E7E7E;
     font-size: 11px;
     font-weight: bold;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 `;
 
 export const ItemContainer = styled.div`
@@ -93,8 +96,7 @@ export const Desc = styled.div`
     display: flex;
     justify-content: space-between;
     width: 100%;
-    font-family: 'Arial';
-    
+    font-family: 'Arial'; 
 `;
 
 export const DescLabel = styled.div`
@@ -165,5 +167,9 @@ export const ButtonIcon = styled.span`
     margin-right: 5px;
 `;
 
+export const FooterImg = styled.img`
+    width: 25px;
+    height: 15px;
+`;
 
 
