@@ -13,6 +13,10 @@ export const Image = styled.img`
     padding: 10px;
     height: 100px;
     width: 120px;
+
+    @media screen and (max-width: 440px) {
+        display: none;
+    }
 `;
 
 export const ItemContentWrap = styled.div`
@@ -20,7 +24,12 @@ export const ItemContentWrap = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 0;
+    width: 200px;
+    padding: 20px 10px 20px 0;
+
+    @media screen and (max-width: 440px) {
+        padding-left: 10px;
+    }
 `;
 
 export const Name = styled.h2`
@@ -36,6 +45,10 @@ export const Desc = styled.div`
     justify-content: space-between;
     width: 100%;
     font-family: 'Arial'; 
+
+    @media screen and (max-width: 440px) {
+        justify-content: flex-start;
+    }
 `;
 
 export const DescLabel = styled.div`
@@ -50,6 +63,10 @@ export const DescType = styled.div`
    font-weight: normal;
    color: #212121;
    margin: 5px 0;
+
+   @media screen and (max-width: 440px) {
+        margin-left: 5px;
+    }
 `;
 
 export const ItemRighBarWrap = styled.div`
@@ -57,7 +74,7 @@ export const ItemRighBarWrap = styled.div`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-right: 20px;
+    margin-right: 10px;
 `;
 
 export const PrevPrice = styled.div`
