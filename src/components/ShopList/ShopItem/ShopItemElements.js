@@ -85,6 +85,7 @@ export const Name = styled.h2`
     color: #00BE97;
     font-size: 20px;
     font-family: 'Rubik', 'Arial';
+    text-align: center;
 `;
 
 export const Desc = styled.div`
