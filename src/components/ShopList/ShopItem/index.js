@@ -17,7 +17,7 @@ const Item = ({ name, type, isNew, sensor, price, promotionalPrice, imageUrl, pr
                     <DescLabel>Sensor: </DescLabel>
                     <DescType>{sensor}</DescType>
                 </Desc>
-                {promotionalPrice && <PrevPrice>{promotionalPrice.toFixed(2)} zł</PrevPrice>}
+                <PrevPrice value={promotionalPrice}>{promotionalPrice && promotionalPrice.toFixed(2) + 'zł'} </PrevPrice>
                 <CurrentPrice>{price.toFixed(2)} zł</CurrentPrice>
             </ContentWrap>
             <Footer><FooterImg src={delivery} alt="delivery" />Darmowa dostawa od 100 złotych</Footer>
