@@ -64,6 +64,13 @@ export const ItemsWrap = styled.div`
     padding: 20px 28px 10px 28px;
 `;
 
+export const NoItems = styled.div`
+    color: #7E7E7E;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+`;
+
 
 export const FooterElement = styled.div`
     display: flex;
