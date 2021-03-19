@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Container from '../components/Container';
 import ContainerNavbar from '../components/Container/Navbar';
+import Footer from '../components/Footer';
 import OrderSidebar from '../components/OrderSidebar';
 import List from '../components/ShopList';
 import { Context } from '../utils/context/Context';
@@ -21,6 +22,7 @@ const Home = () => {
                 <ContainerNavbar action={handleSidebar}/>
                 <List />
             </Container>
+            <Footer />  
         </Context.Provider>
     )
 }
