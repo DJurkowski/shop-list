@@ -1,5 +1,6 @@
 import React from 'react';
-import { ItemContainer, NewLabel, Image, ContentWrap, Name, Desc, DescLabel, DescType, PrevPrice, CurrentPrice, Footer, Button, ButtonIcon, Plus } from './ShopItemElements';
+import { ItemContainer, NewLabel, Image, ContentWrap, Name, Desc, DescLabel, DescType, PrevPrice, CurrentPrice, Footer, FooterImg, Button, ButtonIcon, Plus } from './ShopItemElements';
+import delivery from '../../../utils/images/delivery.svg';
 
 const Item = ({ name, type, isNew, sensor, price, promotionalPrice, imageUrl }) => {
     return (
@@ -19,7 +20,7 @@ const Item = ({ name, type, isNew, sensor, price, promotionalPrice, imageUrl }) 
                 {promotionalPrice && <PrevPrice>{promotionalPrice} zł</PrevPrice>}
                 <CurrentPrice>{price} zł</CurrentPrice>
             </ContentWrap>
-            <Footer>Darmowa dostawa od 100 złotych</Footer>
+            <Footer><FooterImg src={delivery} alt="delivery" />Darmowa dostawa od 100 złotych</Footer>
             <Button><ButtonIcon><Plus/></ButtonIcon>Dodaj do koszyka</Button>
         </ItemContainer>
     );
