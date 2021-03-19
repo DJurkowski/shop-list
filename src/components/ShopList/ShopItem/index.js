@@ -1,24 +1,23 @@
 import React from 'react';
 import { ItemContainer, NewLabel, Image, ContentWrap, Name, Desc, DescLabel, DescType, PrevPrice, CurrentPrice, Footer, Button, ButtonIcon, Plus } from './ShopItemElements';
-import image from '../../../utils/images/ListItem/mouse.png';
 
-const Item = () => {
+const Item = ({ name, type, isNew, sensor, price, promotionalPrice, imageUrl }) => {
     return (
         <ItemContainer>
-            <NewLabel>Nowość!</NewLabel>
-            <Image src={image} alt="name"></Image>
+            {isNew && <NewLabel>Nowość!</NewLabel>}
+            <Image src={imageUrl} alt={name} />
             <ContentWrap>
-                <Name>SteelSeries Rival 3</Name>
+                <Name>{name}</Name>
                 <Desc>
                     <DescLabel>Typ myszki: </DescLabel>
-                    <DescType>Dla gracza</DescType>
+                    <DescType>{type}</DescType>
                 </Desc>
                 <Desc>
                     <DescLabel>Sensor: </DescLabel>
-                    <DescType>Optyczny</DescType>
+                    <DescType>{sensor}</DescType>
                 </Desc>
-                <PrevPrice>199,00 zł</PrevPrice>
-                <CurrentPrice>159,00 zł</CurrentPrice>
+                {promotionalPrice && <PrevPrice>{promotionalPrice} zł</PrevPrice>}
+                <CurrentPrice>{price} zł</CurrentPrice>
             </ContentWrap>
             <Footer>Darmowa dostawa od 100 złotych</Footer>
             <Button><ButtonIcon><Plus/></ButtonIcon>Dodaj do koszyka</Button>
