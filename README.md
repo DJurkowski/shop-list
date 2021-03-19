@@ -1,6 +1,6 @@
 # TodoList App
 
-React application which imitates shop list.
+React application which imitates shopping app.
 
 ## Build With
 
