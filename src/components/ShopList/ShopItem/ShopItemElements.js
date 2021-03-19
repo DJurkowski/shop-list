@@ -13,34 +13,53 @@ export const Button = styled.div`
     border-radius: 25px 0px;
     width: 216px;
     height: 40px;
+    position: absolute;
+    bottom: 15px;
+
+    &:hover {
+        background: #00a382;
+    }
+
+    @media screen and (max-width: 520px) {
+        width: 150px;
+        font-size: 12px;
+    }
 `;
 
 export const Footer = styled.div`
     color: #7E7E7E;
     font-size: 11px;
     font-weight: bold;
+    height: 20px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: absolute;
+    bottom: 20px;
+
+    @media screen and (max-width: 460px){
+        font-size: 10px;
+    } 
 `;
 
 export const ItemContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 250px;
-    min-height: 343px;
-    height: auto;
+    min-height: 353px;
+    height: 353px;
     padding: 10px 0;
-    margin: 10px 20px;
+    margin: 5px 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 6px #00000029;
-    transition: min-height 0.6s ease-in-out;
+    transition: height 0.4s ease-in-out;
     position: relative;
 
     &:hover ${Button} {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     &:hover ${Footer} {
@@ -48,9 +67,19 @@ export const ItemContainer = styled.div`
     }
 
     &:hover {
-        min-height: 363px;
-        transition: min-height 0.6s ease-in-out;
+        height: 373px;
+        transition: height 0.4s ease-in-out;
     }
+
+    @media screen and (max-width: 460px){
+        min-height: 300px;
+        height: 300px;
+
+        &:hover {
+            height: 323px;
+            transition: height 0.4s ease-in-out;
+        }
+    } 
 `;
 
 export const NewLabel = styled.div`
@@ -73,6 +102,12 @@ export const NewLabel = styled.div`
 export const Image = styled.img`
     width: 162px;
     height: 139px;
+    border-radius: 10px;
+
+    @media screen and (max-width: 460px){
+        width: 110px;
+        height: 100px;
+    } 
 `;
 
 export const ContentWrap = styled.div`
@@ -84,15 +119,21 @@ export const ContentWrap = styled.div`
 `;
 
 export const Name = styled.h2`
-    margin: 0;
+    margin: 10px 0 10px 0;
     color: #00BE97;
     font-size: 20px;
     font-family: 'Rubik', 'Arial';
     text-align: center;
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+
+    @media screen and (max-width: 460px){
+        font-size: 15px;
+    } 
 `;
 
 export const Desc = styled.div`
-    margin-top: 3px;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -101,18 +142,29 @@ export const Desc = styled.div`
 
 export const DescLabel = styled.div`
     font-weight: bold;
+    
     font-size: 11px;
     justify-self: flex-start;
-    margin: 5px 0;
+    margin: 0 0 5px;
+
+    @media screen and (max-width: 460px){
+        font-size: 10px;
+    } 
 `;
 export const DescType = styled.div`
    font-size: 11px;
+   align-items: flex-end;
    font-weight: normal;
    color: #212121;
-   margin: 5px 0;
+
+   @media screen and (max-width: 460px){
+        font-size: 10px;
+    } 
 `;
 
 export const PrevPrice = styled.div`
+    visibility: ${({value}) => value != null ? 'visible' : 'hidden' };
+    height: 18px;
     align-self: flex-end;
     color: #FF6E2E;
     text-decoration: line-through;
@@ -120,16 +172,25 @@ export const PrevPrice = styled.div`
     font-size: 15px;
     font-weight: 500;
     margin: 5px 0;
+
+    @media screen and (max-width: 460px){
+        font-size: 12px;
+    } 
 `;
 
 export const CurrentPrice = styled.div`
     align-self: flex-end;
+    height: 18px;
     color: #00BE97;
     font-family: 'Rubik';
     font-weight: medium;
     font-size: 20px;
     font-weight: bold;
     border: none;
+
+    @media screen and (max-width: 460px){
+        font-size: 15px;
+    } 
 `;
 
 export const Plus = styled.span`
