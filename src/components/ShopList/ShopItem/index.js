@@ -1,10 +1,11 @@
 import React from 'react';
-import { ItemContainer, Image, ContentWrap, Name, Desc, DescLabel, DescType, PrevPrice, CurrentPrice, Footer, Button, ButtonIcon, Plus } from './ShopItemElements';
+import { ItemContainer, NewLabel, Image, ContentWrap, Name, Desc, DescLabel, DescType, PrevPrice, CurrentPrice, Footer, Button, ButtonIcon, Plus } from './ShopItemElements';
 import image from '../../../utils/images/ListItem/mouse.png';
 
 const Item = () => {
     return (
         <ItemContainer>
+            <NewLabel>Nowość!</NewLabel>
             <Image src={image} alt="name"></Image>
             <ContentWrap>
                 <Name>SteelSeries Rival 3</Name>
