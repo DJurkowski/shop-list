@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Container from '../components/Container';
 import ContainerNavbar from '../components/Container/Navbar';
+import List from '../components/ShopList';
 
 const Home = () => {
 
@@ -13,7 +14,7 @@ const Home = () => {
     return (
         <Container>
             <ContainerNavbar />
-                
+            <List />
         </Container>
     )
 }
