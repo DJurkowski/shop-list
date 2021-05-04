@@ -8,10 +8,6 @@ React application which imitates shopping app.
 * [React](https://reactjs.org/) - A JavaScript library for building user interfaces.
 * [styled-components](https://styled-components.com/) - styled-components utilises tagged 
 
-## Information
-
-* In folder Zadanie2 I put solution for second task from the mail
-
 ## Requirements
 
 * **Node.js**
